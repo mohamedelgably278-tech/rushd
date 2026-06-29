@@ -685,7 +685,7 @@ function renderDevs(){
       var btn=e.currentTarget,did=btn.dataset.did,dname=btn.dataset.dname,dscore=btn.dataset.dscore;
       var anEl=$('an_'+did);
       btn.disabled=true;btn.textContent='⏳ بيحلّل...';
-      fetch('https://api.anthropic.com/v1/messages',{
+      fetch('/api/claude',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
